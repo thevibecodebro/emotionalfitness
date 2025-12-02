@@ -13,7 +13,8 @@ const RiseHero = () => {
   // Centralized booking URL for consistency
   const calendlyUrl = 'https://calendly.com/alan-muellegger/emotional-fitness-session';
   
-  return <section className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden bg-black">
+  return (
+    <section className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden bg-black">
       {/* Background gradient effects - Red/Orange theme */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-red-600/20 rounded-full filter blur-[100px]"></div>
@@ -69,6 +70,8 @@ const RiseHero = () => {
           </div>
         </div>
       </div>
-    </section>;
-export default RiseHero;
+    </section>
+  );
+};
 
+export default RiseHero;
