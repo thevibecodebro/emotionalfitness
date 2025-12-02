@@ -106,6 +106,11 @@ const Header = () => {
                 </a>
               </li>
               <li>
+                <a href="/rise" className="text-white hover:text-brand-blue transition-colors">
+                  Rise
+                </a>
+              </li>
+              <li>
                 <a href="#contact" className="text-white hover:text-brand-blue transition-colors">
                   Contact
                 </a>
@@ -168,6 +173,15 @@ const Header = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Testimonials
+              </a>
+            </li>
+            <li>
+              <a
+                href="/rise"
+                className="text-white hover:text-brand-blue transition-colors py-2 block"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Rise
               </a>
             </li>
             <li>

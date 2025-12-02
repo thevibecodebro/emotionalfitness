@@ -10,6 +10,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 // Page imports
 import Index from "./pages/Index";
+import Rise from "./pages/Rise";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
@@ -65,6 +66,11 @@ const AppContainer = () => {
             <Route path="/about" element={
               <Suspense fallback={<PageLoader />}>
                 <AboutPage />
+              </Suspense>
+            } />
+            <Route path="/rise" element={
+              <Suspense fallback={<PageLoader />}>
+                <Rise />
               </Suspense>
             } />
             <Route path="/privacy-policy" element={

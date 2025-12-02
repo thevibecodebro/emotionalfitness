@@ -65,7 +65,9 @@ export default {
 				brand: {
 					blue: '#3BBBED',
 					purple: '#9B2FAE',
-					pink: '#E84982'
+					pink: '#E84982',
+					red: '#EF4444',
+					orange: '#F97316'
 				}
 			},
 			borderRadius: {
