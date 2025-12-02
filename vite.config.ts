@@ -1,14 +1,6 @@
-
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
-
-if (process.env.NODE_ENV === 'production') {
-  try {
-  } catch (error) {
-    // Continue with the build even if update fails
-  }
-}
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -25,7 +17,7 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    // Enable minification
+    // Enable minification (using esbuild instead of terser to avoid native dependencies)
     minify: 'esbuild',
     // Enable chunk splitting for better caching
     cssCodeSplit: true,
@@ -58,7 +50,6 @@ export default defineConfig(({ mode }) => ({
     // Optimize dependencies
     commonjsOptions: {
       transformMixedEsModules: true
-    },
     }
   }
 }));
