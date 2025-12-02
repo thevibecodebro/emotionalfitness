@@ -2,15 +2,10 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
-import { execSync } from "child_process";
 
-// Update browserslist database before build
 if (process.env.NODE_ENV === 'production') {
   try {
-    console.log('Updating browserslist database...');
-    execSync('npx update-browserslist-db@latest', { stdio: 'inherit' });
   } catch (error) {
-    console.error('Failed to update browserslist database:', error);
     // Continue with the build even if update fails
   }
 }
@@ -31,7 +26,7 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     // Enable minification
-    minify: 'terser',
+    minify: 'esbuild',
     // Enable chunk splitting for better caching
     cssCodeSplit: true,
     // Configure chunk sizing
@@ -64,11 +59,6 @@ export default defineConfig(({ mode }) => ({
     commonjsOptions: {
       transformMixedEsModules: true
     },
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true
-      }
     }
   }
 }));
