@@ -23,7 +23,7 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <a href="/" className="text-white text-xl font-bold">
-          <span className="gradient-text">GET AFTER IT, FAMILY!&#8482;</span>
+          <span className="gradient-text">GET AFTER IT</span>
         </a>
 
         {/* Desktop Navigation */}

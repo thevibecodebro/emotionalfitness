@@ -15,7 +15,7 @@ const Footer = () => {
             <div className="flex items-center gap-4">
               <Logo size="sm" animate={false} />
               <div>
-                <h3 className="text-xl font-bold gradient-text">EMOTIONAL FITNESS&#8482;</h3>
+                <h3 className="text-xl font-bold gradient-text">EMOTIONAL FITNESS</h3>
                 <p className="text-white/70 text-sm">By Alan Muellegger</p>
               </div>
             </div>

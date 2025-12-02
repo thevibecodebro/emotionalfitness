@@ -43,7 +43,7 @@ const Header = () => {
           className="text-white text-xl font-bold"
           aria-label="Home"
         >
-          <span className="gradient-text">GET AFTER IT, FAMILY!&#8482;</span>
+          <span className="gradient-text">GET AFTER IT</span>
         </a>
 
         {/* Desktop Navigation */}
