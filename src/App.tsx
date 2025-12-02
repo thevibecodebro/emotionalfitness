@@ -1,7 +1,6 @@
 
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
 import ErrorBoundary from "@/components/ErrorBoundary";
@@ -16,28 +15,6 @@ import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
 import AboutPage from "./pages/AboutPage";
 import LegalDisclaimers from "./pages/LegalDisclaimers";
-
-/**
- * Main Application Component
- * 
- * Defines the routes and global providers for the application.
- * 
- * @component
- */
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      retry: 1,
-      // Use meta.onError for error logging
-      meta: {
-        onError: (error: Error) => {
-          console.error('Query error:', error);
-          // Log to error monitoring service if needed
-        }
-      }
-    }
-  }
-});
 
 // Fallback loader component
 const PageLoader = () => (
@@ -116,11 +93,9 @@ const AppContainer = () => {
 
 // Main App component with providers
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <ErrorBoundary>
-      <AppContainer />
-    </ErrorBoundary>
-  </QueryClientProvider>
+  <ErrorBoundary>
+    <AppContainer />
+  </ErrorBoundary>
 );
 
 export default App;
